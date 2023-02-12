@@ -7,6 +7,7 @@ module.exports = {
     extend: {
         fontFamily: {
             roboto: ['Roboto Slab', 'serif'],
+            righteous: ['Righteous', 'cursive']
         },
     },
   },

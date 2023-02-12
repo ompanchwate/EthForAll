@@ -1,9 +1,9 @@
 import React from 'react'
+import { BuyCards } from "../Components/BuyCards";
 
-const BuyensPage = () => {
+
+export const BuyensPage = () => {
   return (
-    <div>BuyensPage</div>
+    <div><BuyCards/></div>
   )
 }
-
-export default BuyensPage
