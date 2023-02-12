@@ -1,13 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar } from "./Components/Navbar";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Home } from './Components/Home';
+import { Mint } from "./Components/Mint";
+import { About } from './Components/About';
+import { Marketplace } from "./Components/Marketplace";
+import { Footer } from "./Components/Footer";
 
 function App() {
   return (
-    <div className="App h-screen bg-yello-200">
-      <h1 className="text-3xl font-bold text-green-800">
-        Hello ETHForAll
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<> <Home /> <Footer/> </>} />
+        <Route path='/marketplace' element={<Marketplace />} />
+        <Route path='/mint' element={<Mint />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
